@@ -1,0 +1,7 @@
+http://db.smartsense.ie:3000/api/temperature
+
+http://ec2-34-216-242-211.us-west-2.compute.amazonaws.com:3000/api/temperature
+
+CORS enabled 
+
+https://lkw6ackrp6.execute-api.us-west-2.amazonaws.com/SmartSenseMongoREST

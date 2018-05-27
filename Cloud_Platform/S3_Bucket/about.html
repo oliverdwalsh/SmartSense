@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N84DZGQ');</script>
+    <!-- End Google Tag Manager -->
+
+	<title>About</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N84DZGQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+   <div class="nav">
+      <ul>
+        <li class="home"><a href="index.html">Home</a></li>
+        <li class="about"><a class="active" href="about.html">About</a></li>
+        <li class="control"><a href="control.html">Control</a></li>
+        <li class="charts"><a href="tempChart.html">Charts</a></li>
+        <li class="contact"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <section class="module parallax parallax-1">
+      <div class="container">
+        <h1>About</h1>
+      </div>
+    </section>
+
+
+    <!--*****************************System Architecture***************************************-->
+
+    <section class="module content">
+      
+    <!--
+      <div class="container">
+        <h2>System Architecture</h2>
+        <p>
+        <ul>
+          <li>Incert Text.</li>
+          <li>Incert Text.</li>
+          <li>Incert Text.</li>
+        </ul>
+        </p>
+
+        
+      </div>
+      -->
+      <div class="centre">
+      	<h2>System Architecture</h2>
+        <img src="./images/architecture_diagram.png" WIDTH = 60% HEIGHT = 60%>
+        <p>Block diagram of the system architecture</p>  
+      </div>
+    </section>
+      
+
+
+<!--*****************************Smart Sense Sensors***************************************-->
+
+    <section class="module content">
+      <div class="container">
+        <h2>Smart Sense Sensors</h2>
+        <p>The sensor is responsible for recording the environmental data from the location it is installed. The sensor uses an Arduino Genuino 101 board for its processor and its onboard BLE capabilities. The sensors attached to the Genuino include an analogue light sensor and a DHT11 sensor which is a digital sensor that records temperature and humidity. An LED is also attached to the board which is the light that can be controlled from the cloud platform.</p>
+        <br><br>
+      </div>
+
+      <div class="centre">
+      	<img src="./images/sensor_schematic.png" WIDTH = 40% HEIGHT = 40%>
+      	<br><br>
+        <p>The Smart Sense Sensor</p>  
+      </div>
+    </section>
+
+<!--*****************************Smart Sense Gateway***************************************-->
+
+    <section class="module content">
+      <div class="container">
+        <h2>Smart Sense Gateway</h2>
+        <p>The gateway operates two-way communication between the sensor and the MQTT broker. The gateway is connected to the sensors over a BLE connection and to the MQTT broker over internet. Connection to the MQTT broker is secured by a username and password which ads a layer of security. When lighting control commands are sent from the MQTT broker, the gateway passes these to the sensor so that the LED can be controlled. It also reads sensor values from the sensors, aggregates these values to avoid unwanted ‘spikes’ or errors and then sends the data in JSON form to the MQTT broker. The gateway operates on a Raspberry Pi 3 running Raspbian which is a Linux based operating system and it uses the Node and Noble library for its operation. </p>
+        <br><br>
+      </div>
+
+      <div class="centre">
+      	<img src="./images/pi_official_case.png" WIDTH = 40% HEIGHT = 40%>
+        <p>The Smart Sense Gateway</p>  
+      </div>
+    </section>
+
+
+<!--*****************************MQTT Broker***************************************-->
+
+    <section class="module content">
+      <div class="container">
+        <h2>MQTT Broker</h2>
+        <p>The MQTT broker provides two-way communication between the gateway and the cloud platform. The server has four topics: temperature, humidity, light level and light control to which messages can be published. These messages can be retrieved by subscribing to the relevant topic. Sensor data is published by the gateway to temperature, humidity and light level topics where it can then be accessed by the database. Lighting control commands are sent directly from the user interface to the light level topic, where then can then be accessed by the gateway. </p>
+      </div>
+    </section>
+
+<!--*****************************MongoDB Server***************************************-->
+
+    <section class="module content">
+      <div class="container">
+        <h2>MongoDB Server</h2>
+        <p>The MongoDB database stores the sensor data in the form of JSON objects that are published to the MQTT topics. There are three collections within the smartsense database: temperature, humidity and light level each of these stores the corresponding sensor data. This database is hosted on the cloud and can be accessed through a RESTful API.</p>
+      </div>
+    </section>
+
+
+<!--*****************************Cloud Platform***************************************-->
+
+    <section class="module content">
+      <div class="container">
+        <h2>Cloud Platform</h2>
+        <p>The Cloud Platform is the client-side server that displays data to the user and enables control of the lights attached to each sensor, it is accessed through the URL ‘https://smartsense.ie/index.html’. The web content which makes up the website is stored in an AWS S3 bucket which is configured to run as a static website. Access to the website is routed though AWS CloudFront which improves load time though cleaver caching of pages already loaded into AWS ‘edge zones’. CloudFront also applies an SSL cert to the website which was authorised by AWS Certificate Manager, a service that provides Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services. This ensures that network communication to and from the website is encrypted. </p>
+      </div>
+    </section>
+
+
+
+<!--*****************************Footer***************************************-->
+
+    <footer class="footer">    
+      <div class="row">  
+        <ul> 
+          <li><a href = "https://www.linkedin.com/in/oliver-walsh/"> <img src="./images/linkedin_2.png" WIDTH = 30 HEIGHT = 30></a></li>
+          <li>&copy; 2017 Oliver Walsh</li>
+        </ul>
+       </div> 
+    </footer>
+
+  </body>
+
+</html>

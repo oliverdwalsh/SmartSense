@@ -1,0 +1,385 @@
+/* ============================================================
+  PRIMARY STRUCTURE
+============================================================ */
+
+/* ============================================================
+  Formatting
+============================================================ */
+
+/* Rules to reset the positions before they are set */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+  }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #444;
+  color: black;
+}
+
+/*--------------------Header-------------------*/
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.control {
+  text-align: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.nav ul {
+    list-style: none;/* Removes bullet points */
+    background-color: rgba(36,33,44,.1);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    /*text-transform: uppercase;*/
+    font-family: "Source Sans Pro", serif;
+    /*
+    display: flex;
+    justify-content: flex-end;*/
+}
+.nav li {
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+ 
+.nav a {
+  text-decoration: none;/* turns off the underlines*/
+  color: #fff;
+  display: block; /* allows link to be clickable in the entire block */ 
+  transition: .3s background-color;
+}
+ 
+.nav a:hover {
+  background-color: #474E69;
+}
+ 
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+
+
+
+
+
+
+
+/*------------------Content------------------*/
+
+section.module:last-child {
+  margin-bottom: 0;
+}
+
+section.module h2 {
+  margin-bottom: 40px;
+  font-family: "Source Sans Pro Light", serif;
+  font-size: 30px;
+}
+
+section.module h3 {
+  margin-bottom: 40px;
+  font-family: "Source Sans Pro Light", serif;
+  font-size: 24px;
+}
+
+p {
+  margin-bottom: 40px;
+  font-family: "Source Sans Pro Light", serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+section.module li{
+  font-family: "Source Sans Pro Light", serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-left: 2em;
+}
+
+section.module p:last-child {
+  margin-bottom: 0;
+}
+
+section.module.content {
+  padding: 100px;
+  width: 60%;/*MAYBE REMOVE THIS OR MAKE "COVER"*/
+  margin:0 auto 0 auto;
+  font-family: "Source Sans Pro Light", serif;
+  font-size: 16px;
+  /*border:1px solid #cccccc;*/
+  background: white; 
+}
+
+section.module.parallax {
+  height: 700px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-top: -50px;
+}
+
+section.module.parallax h1 {
+  color: rgba(255, 255, 255, 0.95 );
+  font-size: 48px;
+  line-height: 700px;
+  font-weight: 700;
+  text-align: center;
+  /*text-transform: uppercase;*/
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section.project.parallax {
+  height: 500px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+
+section.project.parallax h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 48px;
+  line-height: 500px;
+  font-weight: 700;
+  text-align: center;
+  /*text-transform: uppercase;*/
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/*-----------------parralax----------------*/
+
+section.module.parallax-1 {
+  background-image: url("./images/home_sensors.jpg");
+}
+section.module.parallax-2 {
+  background-image: url("./images/code.png");
+}
+
+section.module.parallax-3 {
+  background-image: url("./images/golden_gate.jpg");
+}
+
+section.module.parallax-5 {
+  background-image: url("./images/error.jpg");
+}
+
+section.project.parallax-density {
+  background-image: url("./images/Projects/Density.jpg");
+}
+
+section.project.parallax-filter {
+  background-image: url("./images/Projects/signal_filtering.png");
+}
+
+section.project.parallax-HR {
+  background-image: url("./images/Projects/HR_app.png");
+}
+
+section.project.parallax-circuit_design {
+  background-image: url("./images/Projects/circuit_design.png");
+}
+
+.centre {
+  text-align: center;
+  /*margin-left: 37%;
+  margin-right: 40%;*/
+}
+
+
+/*-------------------Footer--------------------*/
+
+.row ul {
+    list-style: none;/* Removes bullet points */
+    }
+
+footer .row{
+  text-align: center;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+  background-color: rgba(36,33,44,1.0);
+}
+
+/*---------------Size Formatting---------------*/
+
+@media all and (min-width: 600px) {
+  section.module h2 {
+    font-size: 42px;
+  }
+  section.module p {
+    font-size: 20px;
+  }
+  section.module.parallax h1 {
+    font-size: 96px;
+  }
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 160px;
+  }
+}
+
+/*----------------------------------------------------------------------*/
+ 
+@media screen and (min-width: 600px) { 
+/* when screen is atleast 600px will display as follows*/
+    .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+ 
+.nav li {
+    display: inline-block;
+    margin-right: -4px;
+}
+ 
+/*-----------------contact input------------*/
+
+input, textarea{
+  padding: 8px;
+  border: 1px solid #C9C9C9;
+  width: 300px;
+  box-shadow: rgba(0,0,0,0.2) 0px 0px 8px;
+  -moz-box-shadow:  rgba(0,0,0,0.2) 0px 0px 8px;
+  -webkit-box-shadow: rgba(0,0,0,0.2) 0px 0px 8px;
+}
+
+textarea{
+  width: 300px;
+  max-width: 300px;
+  height: 150px;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea: focus{
+  border: 1px solid #DADADA
+  box-shadow: rgba(0,0,0,0.5) 0px 0px 8px;
+  -moz-box-shadow:  rgba(0,0,0,0.5) 0px 0px 8px;
+  -webkit-box-shadow: rgba(0,0,0,0.5) 0px 0px 8px;
+}
+
+.form label{
+  text-align: left;
+  margin-left: 5px;
+  padding-top: 15px;
+  vertical-align: top;
+  display: block;
+  float: top;
+}
+
+.submit input{
+  width: 120px;
+  margin-top: 15px;
+  background-color: rgb(36,33,44);
+  color: #FFFFFF;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.submit input:hover {
+  background-color: #474E69;
+}
+
+section .contact {
+  margin-left: 30%;
+  /*margin-left: 37%;
+  margin-right: 40%;*/
+}
+/*-----------------button------------*/
+
+button {  
+  /*Step 2: Basic Button Styles*/
+  /*position: absolute;*/
+  display: inline-block;
+  width: 70px;
+  height: 50px;
+  margin-top: 15px;
+  background-color: rgb(36,33,44);
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  
+
+  /*Step 3: Text Styles*/
+  color: black;
+  text-align: center;
+  font-family: "Source Sans Pro", serif;
+  font-size: 20px;
+  text-decoration:none;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.buttonOn {
+  background-color: rgb(255,255,0);
+  color: black;
+}
+.buttonOn:hover {background-color: rgb(200,200,0);}
+
+.buttonOff {
+  background-color: #e4e4e4;
+  color: black;
+}
+.buttonOff:hover {background-color: grey;}
+
+
+
+.chartSelect {
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: rgba(36,33,44,.1);
+  /*text-transform: uppercase;*/
+  font-family: "Source Sans Pro", serif;
+  background: lightgrey;
+
+   
+}
+
+.chartSelect li{
+    display:inline;
+}
+
+.chartSelect a {
+  text-decoration: none;/* turns off the underlines*/
+  line-height: 40px;
+  height: 40px;
+  width: 49.8%;
+  font-size: 20px;
+  display:inline-block;
+  transition: .3s background-color;
+  color: white;
+}
+
+.chartSelect a:hover {
+  background-color: #474E69;
+}
+
+.chartSelect a.chartActive {
+  background-color: #474E69;
+  color: white;
+  cursor: default;
+}
+
+
+ 

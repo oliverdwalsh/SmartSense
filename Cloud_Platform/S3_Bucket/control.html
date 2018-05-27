@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N84DZGQ');</script>
+    <!-- End Google Tag Manager -->
+
+    <title>Control</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N84DZGQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+   <div class="nav">
+      <ul>
+        <li class="home"><a href="index.html">Home</a></li>
+        <li class="about"><a href="about.html">About</a></li>
+        <li class="control"><a class="active" href="control.html">Control</a></li>
+        <li class="charts"><a href="tempChart.html">Charts</a></li>
+        <li class="contact"><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <section class="module parallax parallax-1">
+      <div class="container">
+        <h1>Control</h1>
+      </div>
+    </section>
+
+     <section class="module content">
+      <div class="control">
+        
+        <h2>Lighting Control</h2>
+        <p> Select from the buttons below which sensor's light you would like to control.<br>This feature is currently disabled from remote locations.</p>
+
+        <h3> Sensor 1:
+        <button id = "1on"  class ="button buttonOn">On</button>
+        <button id = "1off" class ="button buttonOff">Off</button>
+        </h3>
+
+        <h3> Sensor 2:
+        <button id = "2on" class ="button buttonOn">On</button>
+        <button id = "2off" class ="button buttonOff">Off</button>
+        </h3>
+
+        <!-- include link to js files required -->
+        <script type="text/javascript" src="JavaScripts/paho-mqtt.js" ></script>
+        <!--This is a reference to the Paho Javascript client side browser based library-->
+        <script type="text/javascript" src="JavaScripts/lightControl.js"></script>
+
+      </div>
+    </section>
+
+    <footer class="footer">    
+      <div class="row">  
+        <ul> 
+          <li><a href = "https://www.linkedin.com/in/oliver-walsh/"> <img src="./images/linkedin_2.png" WIDTH = 30 HEIGHT = 30></a></li>
+          <li>&copy; 2017 Oliver Walsh</li>
+        </ul>
+       </footer> 
+    </footer>
+
+  </body>
+
+</html>
