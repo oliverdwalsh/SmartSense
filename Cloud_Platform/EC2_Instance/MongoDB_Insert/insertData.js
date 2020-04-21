@@ -7,7 +7,7 @@ var client  = mqtt.connect({
     host: 'mqtt.smartsense.ie',
     port: 1883,
     username: 'oliver',
-    password: 'ww9mewbf'
+    password: '${passwordKey}'
 });//client is then set up to connect to this URL
 
 var dbo, dbGlobal;

@@ -130,7 +130,7 @@ section.module.parallax {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  margin-top: -50px;
+  /*margin-top: -50px; - commented out as it is overlain */
 }
 
 section.module.parallax h1 {
