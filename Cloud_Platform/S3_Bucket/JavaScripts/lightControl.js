@@ -17,7 +17,7 @@ client.onConnectionLost = onConnectionLost;
 client.connect({
     onSuccess: onConnect, 
     userName : "oliver",
-    password : "ww9mewbf",
+    password : "${passwordKey}",
 });
 
  
